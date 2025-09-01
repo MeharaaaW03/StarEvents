@@ -1,0 +1,8 @@
+"# Visual Studio and .NET Core" 
+".vs/" 
+"**/bin/" 
+"**/obj/" 
+"*.user" 
+"*.suo" 
+"*.csproj.user" 
+"appsettings.Development.json" 
