@@ -30,5 +30,20 @@ namespace StarEvents.Controllers
                 return Content($"❌ MongoDB Connection Failed: {ex.Message}");
             }
         }
+
+        // ADD THIS NEW METHOD TO TEST USER COLLECTION
+        public IActionResult TestUser()
+        {
+            try
+            {
+                // Test user collection access
+                var userCount = _context.Users.CountDocuments(_ => true);
+                return Content($"✅ User collection accessible! Total users: {userCount}");
+            }
+            catch (Exception ex)
+            {
+                return Content($"❌ User test failed: {ex.Message}");
+            }
+        }
     }
 }
